@@ -23,6 +23,7 @@ class CalculatorViewController: UIViewController {
             billInputView,
             tipView,
             splitView,
+            UIView()
         ])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
@@ -75,7 +76,7 @@ extension CalculatorViewController: CodeView {
     }
     
     func setupAdditionalConfiguration() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = ThemeColor.background
     }
 }
 

@@ -27,6 +27,10 @@
 		14CBA74B296939B900CBDDDC /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA74A296939B900CBDDDC /* AmountView.swift */; };
 		14CBA74E29693C5100CBDDDC /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA74D29693C5100CBDDDC /* CodeView.swift */; };
 		14CBA75029693C6B00CBDDDC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA74F29693C6B00CBDDDC /* UIView+Extensions.swift */; };
+		14CBA752296A59EA00CBDDDC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA751296A59EA00CBDDDC /* UIColor+Extensions.swift */; };
+		14CBA755296A5A2E00CBDDDC /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA754296A5A2E00CBDDDC /* ThemeColor.swift */; };
+		14CBA757296A5B9D00CBDDDC /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA756296A5B9D00CBDDDC /* ThemeFont.swift */; };
+		14CBA759296A621D00CBDDDC /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA758296A621D00CBDDDC /* LabelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		14CBA74A296939B900CBDDDC /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		14CBA74D29693C5100CBDDDC /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		14CBA74F29693C6B00CBDDDC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		14CBA751296A59EA00CBDDDC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		14CBA754296A5A2E00CBDDDC /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		14CBA756296A5B9D00CBDDDC /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		14CBA758296A621D00CBDDDC /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,7 @@
 				14CBA73F2969382900CBDDDC /* ViewModel */,
 				14CBA73E2969381F00CBDDDC /* Controller */,
 				14CBA74C29693C0100CBDDDC /* Supporting Files */,
+				14CBA753296A5A0800CBDDDC /* Extensions */,
 			);
 			path = SplitCheckClaculator;
 			sourceTree = "<group>";
@@ -214,9 +223,20 @@
 			isa = PBXGroup;
 			children = (
 				14CBA74D29693C5100CBDDDC /* CodeView.swift */,
-				14CBA74F29693C6B00CBDDDC /* UIView+Extensions.swift */,
+				14CBA754296A5A2E00CBDDDC /* ThemeColor.swift */,
+				14CBA756296A5B9D00CBDDDC /* ThemeFont.swift */,
+				14CBA758296A621D00CBDDDC /* LabelFactory.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14CBA753296A5A0800CBDDDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14CBA74F29693C6B00CBDDDC /* UIView+Extensions.swift */,
+				14CBA751296A59EA00CBDDDC /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,11 +388,15 @@
 				14CBA74E29693C5100CBDDDC /* CodeView.swift in Sources */,
 				14CBA70329692E1F00CBDDDC /* CalculatorViewController.swift in Sources */,
 				14CBA75029693C6B00CBDDDC /* UIView+Extensions.swift in Sources */,
+				14CBA759296A621D00CBDDDC /* LabelFactory.swift in Sources */,
+				14CBA757296A5B9D00CBDDDC /* ThemeFont.swift in Sources */,
 				14CBA7492969399300CBDDDC /* SplitView.swift in Sources */,
 				14CBA74B296939B900CBDDDC /* AmountView.swift in Sources */,
+				14CBA755296A5A2E00CBDDDC /* ThemeColor.swift in Sources */,
 				14CBA743296938BC00CBDDDC /* LogoView.swift in Sources */,
 				14CBA7472969398D00CBDDDC /* TipView.swift in Sources */,
 				14CBA7452969397D00CBDDDC /* InputView.swift in Sources */,
+				14CBA752296A59EA00CBDDDC /* UIColor+Extensions.swift in Sources */,
 				14CBA6FF29692E1F00CBDDDC /* AppDelegate.swift in Sources */,
 				14CBA70129692E1F00CBDDDC /* SceneDelegate.swift in Sources */,
 			);
