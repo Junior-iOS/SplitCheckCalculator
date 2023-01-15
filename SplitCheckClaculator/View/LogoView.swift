@@ -74,7 +74,5 @@ extension LogoView: CodeView {
         }
     }
     
-    func setupAdditionalConfiguration() {
-        
-    }
+    func setupAdditionalConfiguration() {}
 }

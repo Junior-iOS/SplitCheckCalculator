@@ -11,7 +11,7 @@ import SnapKit
 class CalculatorViewController: UIViewController {
     
     private let logoView = LogoView()
-    private let amountView = AmountView()
+    private let amountView = ResultView()
     private let billInputView = InputView()
     private let tipView = TipView()
     private let splitView = SplitView()

@@ -22,4 +22,9 @@ extension UIView {
         layer.shadowRadius = radius
         layer.backgroundColor = backgroundColor?.cgColor
     }
+    
+    func addCornerRadius(_ radius: CGFloat) {
+        layer.masksToBounds = true
+        layer.cornerRadius = radius
+    }
 }
