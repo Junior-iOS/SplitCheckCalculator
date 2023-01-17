@@ -127,14 +127,6 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
-		14A72FE92973A277007649C2 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				14A72FE52973A240007649C2 /* DescriptionView.swift */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
 		14A72FEA2973A28D007649C2 /* Constraint */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +235,7 @@
 				14CBA742296938BC00CBDDDC /* LogoView.swift */,
 				14CBA74A296939B900CBDDDC /* ResultView.swift */,
 				14A72FE329739D03007649C2 /* AmountView.swift */,
+				14A72FE52973A240007649C2 /* DescriptionView.swift */,
 				14CBA7442969397D00CBDDDC /* InputView.swift */,
 				14CBA7462969398D00CBDDDC /* TipView.swift */,
 				14CBA7482969399300CBDDDC /* SplitView.swift */,
@@ -263,7 +256,6 @@
 				14A72FEA2973A28D007649C2 /* Constraint */,
 				14A72FE72973A258007649C2 /* Themes */,
 				14A72FE82973A264007649C2 /* Labels */,
-				14A72FE92973A277007649C2 /* UIView */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
