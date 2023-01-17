@@ -12,7 +12,6 @@ final class InputView: UIView {
     
     private let descriptionView: DescriptionView = {
         let view = DescriptionView(top: "Enter", bottom: "your bill")
-        view.addCornerRadius(8)
         return view
     }()
     

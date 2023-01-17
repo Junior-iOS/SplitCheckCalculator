@@ -14,11 +14,11 @@ final class DescriptionView: UIView {
     let bottom: String
     
     private lazy var topLabel: UILabel = {
-        LabelFactory.build(text: top, font: ThemeFont.bold(ofSize: 18), backgroundColor: ThemeColor.background)
+        LabelFactory.build(text: top, font: ThemeFont.bold(ofSize: 18))
     }()
     
     private lazy var bottomLabel: UILabel = {
-        LabelFactory.build(text: bottom, font: ThemeFont.regular(ofSize: 16), backgroundColor: ThemeColor.background)
+        LabelFactory.build(text: bottom, font: ThemeFont.regular(ofSize: 16))
     }()
     
     private lazy var stackView: UIStackView = {
