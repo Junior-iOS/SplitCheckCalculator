@@ -7,8 +7,11 @@
 
 import Foundation
 import UIKit
+import Combine
 
 final class TipView: UIView {
+    
+    private var cancellables = Set<AnyCancellable>()
     
     private let descriptionView: DescriptionView = {
         let view = DescriptionView(top: "Choose", bottom: "your tip")
@@ -17,16 +20,28 @@ final class TipView: UIView {
     
     private lazy var tenPercentTipButton: UIButton = {
         let button = buildTipButton(with: .tenPercent)
+        button.tapPublisher.flatMap({
+            Just(Tip.tenPercent)
+        }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
     private lazy var fifteenPercentTipButton: UIButton = {
         let button = buildTipButton(with: .fifteenPercent)
+        button.tapPublisher.flatMap({
+            Just(Tip.fifteenPercent)
+        }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
     private lazy var twentyPercentTipButton: UIButton = {
         let button = buildTipButton(with: .twentyPercent)
+        button.tapPublisher.flatMap({
+            Just(Tip.twentyPercent)
+        }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
         return button
     }()
     
@@ -53,9 +68,13 @@ final class TipView: UIView {
         stack.axis = .vertical
         stack.distribution = .fillEqually
         stack.spacing = 16
-//        stack.backgroundColor = ThemeColor.background
         return stack
     }()
+    
+    private let tipSubject = CurrentValueSubject<Tip, Never>(.none)
+    var tipPublisher: AnyPublisher<Tip, Never> {
+        tipSubject.eraseToAnyPublisher()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

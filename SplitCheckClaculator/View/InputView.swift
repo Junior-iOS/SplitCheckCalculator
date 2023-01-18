@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Combine
+import CombineCocoa
 
 final class InputView: UIView {
     
@@ -35,6 +37,7 @@ final class InputView: UIView {
         textField.borderStyle = .none
         textField.font = ThemeFont.demibold(ofSize: 28)
         textField.keyboardType = .decimalPad
+        textField.clearButtonMode = .whileEditing
         textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
         textField.tintColor = ThemeColor.text
         textField.textColor = ThemeColor.text
@@ -51,13 +54,27 @@ final class InputView: UIView {
         return textField
     }()
     
+    private var cancellables = Set<AnyCancellable>()
+    private let billSubject: PassthroughSubject<Double, Never> = .init()
+    
+    public var billPublisher: AnyPublisher<Double, Never> {
+        return billSubject.eraseToAnyPublisher()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        observe()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func observe() {
+        amountTextField.textPublisher.sink { [unowned self] text in
+            self.billSubject.send(text?.replacingOccurrences(of: ",", with: ".").doubleValue ?? 0)
+        }.store(in: &cancellables)
     }
     
     @objc private func didTapDoneButton() {

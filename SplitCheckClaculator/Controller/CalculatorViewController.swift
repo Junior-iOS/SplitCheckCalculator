@@ -43,8 +43,8 @@ class CalculatorViewController: UIViewController {
     }
     
     private func bind() {
-        let input = CalculatorViewModel.Input(billPublisher: Just(10).eraseToAnyPublisher(),
-                                              tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
+        let input = CalculatorViewModel.Input(billPublisher: billInputView.billPublisher,
+                                              tipPublisher: tipView.tipPublisher,
                                               splitPublisher: Just(5).eraseToAnyPublisher())
         let output = viewModel.transform(input: input)
         output.updateViewPublisher.sink { result in

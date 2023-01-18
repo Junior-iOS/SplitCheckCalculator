@@ -12,6 +12,7 @@
 		14A72FF029774A05007649C2 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FEF29774A05007649C2 /* CalculatorViewModel.swift */; };
 		14A72FF229778A53007649C2 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF129778A53007649C2 /* Tip.swift */; };
 		14A72FF429778A64007649C2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF329778A64007649C2 /* Result.swift */; };
+		14A72FF62977930B007649C2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF52977930B007649C2 /* String+Extensions.swift */; };
 		14CBA6FF29692E1F00CBDDDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA6FE29692E1F00CBDDDC /* AppDelegate.swift */; };
 		14CBA70129692E1F00CBDDDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA70029692E1F00CBDDDC /* SceneDelegate.swift */; };
 		14CBA70329692E1F00CBDDDC /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA70229692E1F00CBDDDC /* CalculatorViewController.swift */; };
@@ -61,6 +62,7 @@
 		14A72FEF29774A05007649C2 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		14A72FF129778A53007649C2 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		14A72FF329778A64007649C2 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		14A72FF52977930B007649C2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		14CBA6FB29692E1E00CBDDDC /* SplitCheckClaculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitCheckClaculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CBA6FE29692E1F00CBDDDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14CBA70029692E1F00CBDDDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			children = (
 				14CBA74F29693C6B00CBDDDC /* UIView+Extensions.swift */,
 				14CBA751296A59EA00CBDDDC /* UIColor+Extensions.swift */,
+				14A72FF52977930B007649C2 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A72FF62977930B007649C2 /* String+Extensions.swift in Sources */,
 				14CBA74E29693C5100CBDDDC /* CodeView.swift in Sources */,
 				14CBA70329692E1F00CBDDDC /* CalculatorViewController.swift in Sources */,
 				14A72FF429778A64007649C2 /* Result.swift in Sources */,
