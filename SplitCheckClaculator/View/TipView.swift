@@ -10,29 +10,6 @@ import UIKit
 
 final class TipView: UIView {
     
-    enum Tip {
-        case none
-        case tenPercent
-        case fifteenPercent
-        case twentyPercent
-        case custom(value: Int)
-        
-        var value: String {
-            switch self {
-            case .none:
-                return ""
-            case .tenPercent:
-                return "10%"
-            case .fifteenPercent:
-                return "15%"
-            case .twentyPercent:
-                return "20%"
-            case .custom(let value):
-                return String(value)
-            }
-        }
-    }
-    
     private let descriptionView: DescriptionView = {
         let view = DescriptionView(top: "Choose", bottom: "your tip")
         return view

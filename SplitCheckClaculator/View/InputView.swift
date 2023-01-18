@@ -77,7 +77,7 @@ extension InputView: CodeView {
             make.top.bottom.leading.equalToSuperview()
             make.centerY.equalTo(containerView.snp.centerY)
             make.width.equalTo(68)
-            make.trailing.equalTo(containerView.snp.leading).offset(-16)
+            make.trailing.equalTo(containerView.snp.leading).offset(-24)
         }
         
         containerView.snp.makeConstraints { make in

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		14A72FE429739D03007649C2 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FE329739D03007649C2 /* AmountView.swift */; };
 		14A72FE62973A240007649C2 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FE52973A240007649C2 /* DescriptionView.swift */; };
+		14A72FF029774A05007649C2 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FEF29774A05007649C2 /* CalculatorViewModel.swift */; };
+		14A72FF229778A53007649C2 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF129778A53007649C2 /* Tip.swift */; };
+		14A72FF429778A64007649C2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF329778A64007649C2 /* Result.swift */; };
 		14CBA6FF29692E1F00CBDDDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA6FE29692E1F00CBDDDC /* AppDelegate.swift */; };
 		14CBA70129692E1F00CBDDDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA70029692E1F00CBDDDC /* SceneDelegate.swift */; };
 		14CBA70329692E1F00CBDDDC /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA70229692E1F00CBDDDC /* CalculatorViewController.swift */; };
@@ -55,6 +58,9 @@
 /* Begin PBXFileReference section */
 		14A72FE329739D03007649C2 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		14A72FE52973A240007649C2 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		14A72FEF29774A05007649C2 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		14A72FF129778A53007649C2 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		14A72FF329778A64007649C2 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		14CBA6FB29692E1E00CBDDDC /* SplitCheckClaculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitCheckClaculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CBA6FE29692E1F00CBDDDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14CBA70029692E1F00CBDDDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +231,7 @@
 		14CBA73F2969382900CBDDDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				14A72FEF29774A05007649C2 /* CalculatorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -246,6 +253,8 @@
 		14CBA7412969383700CBDDDC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				14A72FF129778A53007649C2 /* Tip.swift */,
+				14A72FF329778A64007649C2 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -417,6 +426,7 @@
 			files = (
 				14CBA74E29693C5100CBDDDC /* CodeView.swift in Sources */,
 				14CBA70329692E1F00CBDDDC /* CalculatorViewController.swift in Sources */,
+				14A72FF429778A64007649C2 /* Result.swift in Sources */,
 				14CBA75029693C6B00CBDDDC /* UIView+Extensions.swift in Sources */,
 				14CBA759296A621D00CBDDDC /* LabelFactory.swift in Sources */,
 				14CBA757296A5B9D00CBDDDC /* ThemeFont.swift in Sources */,
@@ -427,8 +437,10 @@
 				14CBA7472969398D00CBDDDC /* TipView.swift in Sources */,
 				14CBA7452969397D00CBDDDC /* InputView.swift in Sources */,
 				14A72FE429739D03007649C2 /* AmountView.swift in Sources */,
+				14A72FF029774A05007649C2 /* CalculatorViewModel.swift in Sources */,
 				14CBA752296A59EA00CBDDDC /* UIColor+Extensions.swift in Sources */,
 				14CBA6FF29692E1F00CBDDDC /* AppDelegate.swift in Sources */,
+				14A72FF229778A53007649C2 /* Tip.swift in Sources */,
 				14CBA70129692E1F00CBDDDC /* SceneDelegate.swift in Sources */,
 				14A72FE62973A240007649C2 /* DescriptionView.swift in Sources */,
 			);
