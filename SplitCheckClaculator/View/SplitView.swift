@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Combine
+import CombineCocoa
 
 final class SplitView: UIView {
     
@@ -16,11 +18,21 @@ final class SplitView: UIView {
     }()
     
     private lazy var decrementButton: UIButton = {
-        return buildButton(text: "-", corner: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+        let button = buildButton(text: "-", corner: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+        button.tapPublisher.flatMap { [unowned self] _ in
+            Just(self.splitSubject.value == 1 ? 1 : self.splitSubject.value - 1)
+        }.assign(to: \.value, on: splitSubject)
+            .store(in: &cancellables)
+        return button
     }()
     
     private lazy var increaseButton: UIButton = {
-        return buildButton(text: "+", corner: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        let button = buildButton(text: "+", corner: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        button.tapPublisher.flatMap { [unowned self] _ in
+            Just(self.splitSubject.value + 1)
+        }.assign(to: \.value, on: splitSubject)
+            .store(in: &cancellables)
+        return button
     }()
     
     private let quantityLabel: UILabel = {
@@ -35,10 +47,17 @@ final class SplitView: UIView {
         return stack
     }()
     
+    private var cancellables = Set<AnyCancellable>()
+    
+    private let splitSubject: CurrentValueSubject<Int, Never> = .init(1)
+    var splitPublisher: AnyPublisher<Int, Never> {
+        splitSubject.removeDuplicates().eraseToAnyPublisher()
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setup()
+        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -52,6 +71,12 @@ final class SplitView: UIView {
         button.addRoundedCorners(corner, radius: 8.0)
         button.backgroundColor = ThemeColor.primary
         return button
+    }
+    
+    private func observe() {
+        splitSubject.sink { quantity in
+            self.quantityLabel.text = quantity.stringValue
+        }.store(in: &cancellables)
     }
 }
 

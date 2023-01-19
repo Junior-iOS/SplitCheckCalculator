@@ -8,7 +8,7 @@
 import Foundation
 
 struct Result {
-    let totalBill: Double
     let amountPerPerson: Double
+    let totalBill: Double
     let totalTip: Double
 }
