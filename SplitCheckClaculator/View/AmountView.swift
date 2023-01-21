@@ -52,6 +52,16 @@ final class AmountView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configure(amount: Double) {
+        let text = NSMutableAttributedString(
+            string: amount.formattedCurrency,
+            attributes: [.font: ThemeFont.bold(ofSize: 24)])
+        text.addAttributes(
+            [.font: ThemeFont.bold(ofSize: 16)],
+            range: NSMakeRange(0, 2))
+        amountLabel.attributedText = text
+    }
 }
 
 extension AmountView: CodeView {

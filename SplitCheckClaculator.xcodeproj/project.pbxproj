@@ -39,6 +39,7 @@
 		14CBA757296A5B9D00CBDDDC /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA756296A5B9D00CBDDDC /* ThemeFont.swift */; };
 		14CBA759296A621D00CBDDDC /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA758296A621D00CBDDDC /* LabelFactory.swift */; };
 		14DB1856297916AB00B94331 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB1855297916AB00B94331 /* Int+Extensions.swift */; };
+		14DB1858297B8BC100B94331 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DB1857297B8BC100B94331 /* Double+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		14CBA756296A5B9D00CBDDDC /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		14CBA758296A621D00CBDDDC /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		14DB1855297916AB00B94331 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		14DB1857297B8BC100B94331 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 				14A72FF52977930B007649C2 /* String+Extensions.swift */,
 				14DB1855297916AB00B94331 /* Int+Extensions.swift */,
 				14A72FF72977A436007649C2 /* UIResponder+Extensions.swift */,
+				14DB1857297B8BC100B94331 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				14CBA752296A59EA00CBDDDC /* UIColor+Extensions.swift in Sources */,
 				14CBA6FF29692E1F00CBDDDC /* AppDelegate.swift in Sources */,
 				14A72FF229778A53007649C2 /* Tip.swift in Sources */,
+				14DB1858297B8BC100B94331 /* Double+Extensions.swift in Sources */,
 				14CBA70129692E1F00CBDDDC /* SceneDelegate.swift in Sources */,
 				14A72FE62973A240007649C2 /* DescriptionView.swift in Sources */,
 			);

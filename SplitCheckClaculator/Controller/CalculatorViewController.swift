@@ -12,7 +12,7 @@ import Combine
 class CalculatorViewController: UIViewController {
     
     private let logoView = LogoView()
-    private let amountView = ResultView()
+    private let resultView = ResultView()
     private let billInputView = InputView()
     private let tipView = TipView()
     private let splitView = SplitView()
@@ -20,7 +20,7 @@ class CalculatorViewController: UIViewController {
     private lazy var stackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [
             logoView,
-            amountView,
+            resultView,
             billInputView,
             tipView,
             splitView,
@@ -47,8 +47,8 @@ class CalculatorViewController: UIViewController {
                                               tipPublisher: tipView.tipPublisher,
                                               splitPublisher: splitView.splitPublisher)
         let output = viewModel.transform(input: input)
-        output.updateViewPublisher.sink { result in
-            print(result)
+        output.updateViewPublisher.sink { [unowned self] result in
+            resultView.configure(result: result)
         }.store(in: &cancellables)
     }
 
@@ -72,7 +72,7 @@ extension CalculatorViewController: CodeView {
             make.height.equalTo(48)
         }
         
-        amountView.snp.makeConstraints { make in
+        resultView.snp.makeConstraints { make in
             make.height.equalTo(224)
         }
         
