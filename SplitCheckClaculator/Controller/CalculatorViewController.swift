@@ -73,6 +73,7 @@ class CalculatorViewController: UIViewController {
             self.billInputView.reset()
             self.tipView.reset()
             self.splitView.reset()
+            self.setLogoAnimation()
         }.store(in: &cancellables)
     }
 
@@ -80,6 +81,16 @@ class CalculatorViewController: UIViewController {
         viewTapPublisher.sink { [unowned self] value in
             self.view.endEditing(value)
         }.store(in: &cancellables)
+    }
+    
+    private func setLogoAnimation() {
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 5.0, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
+            self.logoView.transform = .init(scaleX: 1.5, y: 1.5)
+        } completion: { _ in
+            UIView.animate(withDuration: 0.1) {
+                self.logoView.transform = .identity
+            }
+        }
     }
 }
 

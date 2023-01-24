@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14707A2F297F612000EB278B /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 14707A2E297F612000EB278B /* click.m4a */; };
 		14707A32297F61E300EB278B /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14707A31297F61E300EB278B /* AudioPlayerService.swift */; };
+		14707A342980310700EB278B /* MockAudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14707A332980310700EB278B /* MockAudioPlayerService.swift */; };
 		14A72FE429739D03007649C2 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FE329739D03007649C2 /* AmountView.swift */; };
 		14A72FE62973A240007649C2 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FE52973A240007649C2 /* DescriptionView.swift */; };
 		14A72FF029774A05007649C2 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FEF29774A05007649C2 /* CalculatorViewModel.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		14707A2E297F612000EB278B /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
 		14707A31297F61E300EB278B /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
+		14707A332980310700EB278B /* MockAudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioPlayerService.swift; sourceTree = "<group>"; };
 		14A72FE329739D03007649C2 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		14A72FE52973A240007649C2 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		14A72FEF29774A05007649C2 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				14CBA71529692E2100CBDDDC /* SplitCheckClaculatorTests.swift */,
+				14707A332980310700EB278B /* MockAudioPlayerService.swift */,
 			);
 			path = SplitCheckClaculatorTests;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14CBA71629692E2100CBDDDC /* SplitCheckClaculatorTests.swift in Sources */,
+				14707A342980310700EB278B /* MockAudioPlayerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

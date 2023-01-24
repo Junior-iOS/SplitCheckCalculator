@@ -74,7 +74,7 @@ final class SplitView: UIView {
     }
     
     public func reset() {
-        splitSubject.send(0)
+        splitSubject.send(1)
     }
     
     private func observe() {
