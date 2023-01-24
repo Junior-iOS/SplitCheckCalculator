@@ -63,6 +63,7 @@ class CalculatorViewController: UIViewController {
                                               tipPublisher: tipView.tipPublisher,
                                               splitPublisher: splitView.splitPublisher,
                                               logoViewTapPublisher: logoViewTapPublisher)
+        
         let output = viewModel.transform(input: input)
         output.updateViewPublisher.sink { [unowned self] result in
             resultView.configure(result: result)
@@ -72,10 +73,6 @@ class CalculatorViewController: UIViewController {
     private func observe() {
         viewTapPublisher.sink { [unowned self] value in
             self.view.endEditing(value)
-        }.store(in: &cancellables)
-        
-        logoViewTapPublisher.sink { _ in
-            print("TAPPED LOGO")
         }.store(in: &cancellables)
     }
 }

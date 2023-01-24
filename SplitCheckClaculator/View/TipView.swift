@@ -76,6 +76,7 @@ final class TipView: UIView {
     }()
     
     private let tipSubject: CurrentValueSubject<Tip, Never> = .init(.none)
+    
     var tipPublisher: AnyPublisher<Tip, Never> {
         tipSubject.eraseToAnyPublisher()
     }
