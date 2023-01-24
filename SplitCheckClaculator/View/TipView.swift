@@ -87,6 +87,10 @@ final class TipView: UIView {
         observe()
     }
     
+    public func reset() {
+        tipSubject.send(.none)
+    }
+    
     private func resetView() {
         [tenPercentTipButton,
          fifteenPercentTipButton,

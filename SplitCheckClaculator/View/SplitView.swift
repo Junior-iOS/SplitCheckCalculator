@@ -73,6 +73,10 @@ final class SplitView: UIView {
         return button
     }
     
+    public func reset() {
+        splitSubject.send(0)
+    }
+    
     private func observe() {
         splitSubject.sink { quantity in
             self.quantityLabel.text = quantity.stringValue

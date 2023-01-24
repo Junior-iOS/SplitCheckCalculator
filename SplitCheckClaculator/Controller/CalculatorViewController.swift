@@ -44,7 +44,7 @@ class CalculatorViewController: UIViewController {
     private lazy var logoViewTapPublisher: AnyPublisher<Void, Never> = {
         let tap = UITapGestureRecognizer(target: self, action: nil)
         tap.numberOfTapsRequired = 2
-        view.addGestureRecognizer(tap)
+        logoView.addGestureRecognizer(tap)
         return tap.tapPublisher.flatMap { _ in
             Just(())
         }.eraseToAnyPublisher()
@@ -67,6 +67,12 @@ class CalculatorViewController: UIViewController {
         let output = viewModel.transform(input: input)
         output.updateViewPublisher.sink { [unowned self] result in
             resultView.configure(result: result)
+        }.store(in: &cancellables)
+        
+        output.resetCalculatorPublisher.sink { [unowned self] in
+            self.billInputView.reset()
+            self.tipView.reset()
+            self.splitView.reset()
         }.store(in: &cancellables)
     }
 

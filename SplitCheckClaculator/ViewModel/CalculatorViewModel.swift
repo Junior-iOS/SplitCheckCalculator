@@ -37,7 +37,7 @@ final class CalculatorViewModel {
                 let totalTip = getTipAmount(bill: bill, tip: tip)
                 let totalBill = bill + totalTip
                 let amountPerPerson = totalBill / Double(split)
-                let result = Result(amountPerPerson: amountPerPerson, totalBill: totalBill, totalTip: totalTip)
+                let result = Result(amountPerPerson: amountPerPerson.isNaN ? 0 : amountPerPerson, totalBill: totalBill, totalTip: totalTip)
                 return Just(result)
             }.eraseToAnyPublisher()
         

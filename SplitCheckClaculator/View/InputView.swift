@@ -71,6 +71,11 @@ final class InputView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func reset() {
+        amountTextField.text = nil
+        billSubject.send(0.0)
+    }
+    
     private func observe() {
         amountTextField.textPublisher.sink { [unowned self] text in
             self.billSubject.send(text?.replacingOccurrences(of: ",", with: ".").doubleValue ?? 0)
