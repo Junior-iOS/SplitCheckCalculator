@@ -33,25 +33,51 @@ class CalculatorViewController: UIViewController {
         return stack
     }()
     
+    private lazy var viewTapPublisher: AnyPublisher<Bool, Never> = {
+        let tap = UITapGestureRecognizer(target: self, action: nil)
+        view.addGestureRecognizer(tap)
+        return tap.tapPublisher.flatMap { _ in
+            Just(true)
+        }.eraseToAnyPublisher()
+    }()
+    
+    private lazy var logoViewTapPublisher: AnyPublisher<Void, Never> = {
+        let tap = UITapGestureRecognizer(target: self, action: nil)
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
+        return tap.tapPublisher.flatMap { _ in
+            Just(())
+        }.eraseToAnyPublisher()
+    }()
+    
     private let viewModel = CalculatorViewModel()
     private var cancellables = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        bind()
     }
     
     private func bind() {
         let input = CalculatorViewModel.Input(billPublisher: billInputView.billPublisher,
                                               tipPublisher: tipView.tipPublisher,
-                                              splitPublisher: splitView.splitPublisher)
+                                              splitPublisher: splitView.splitPublisher,
+                                              logoViewTapPublisher: logoViewTapPublisher)
         let output = viewModel.transform(input: input)
         output.updateViewPublisher.sink { [unowned self] result in
             resultView.configure(result: result)
         }.store(in: &cancellables)
     }
 
+    private func observe() {
+        viewTapPublisher.sink { [unowned self] value in
+            self.view.endEditing(value)
+        }.store(in: &cancellables)
+        
+        logoViewTapPublisher.sink { _ in
+            print("TAPPED LOGO")
+        }.store(in: &cancellables)
+    }
 }
 
 // MARK: - CODEVIEW
@@ -91,6 +117,8 @@ extension CalculatorViewController: CodeView {
     
     func setupAdditionalConfiguration() {
         view.backgroundColor = ThemeColor.background
+        bind()
+        observe()
     }
 }
 

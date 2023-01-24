@@ -16,10 +16,12 @@ final class CalculatorViewModel {
         let billPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
         let splitPublisher: AnyPublisher<Int, Never>
+        let logoViewTapPublisher: AnyPublisher<Void, Never>
     }
     
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
+        let resultCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     func transform(input: Input) -> Output {
@@ -33,7 +35,9 @@ final class CalculatorViewModel {
                 let result = Result(amountPerPerson: amountPerPerson, totalBill: totalBill, totalTip: totalTip)
                 return Just(result)
             }.eraseToAnyPublisher()
-        return Output(updateViewPublisher: updateViewPublishers)
+        
+        let resultCalculatorPublisher = input.logoViewTapPublisher
+        return Output(updateViewPublisher: updateViewPublishers, resultCalculatorPublisher: resultCalculatorPublisher)
     }
     
     private func getTipAmount(bill: Double, tip: Tip) -> Double {
@@ -50,5 +54,4 @@ final class CalculatorViewModel {
             return Double(value)
         }
     }
-    
 }
