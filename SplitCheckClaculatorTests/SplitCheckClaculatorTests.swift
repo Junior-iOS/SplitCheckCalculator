@@ -113,15 +113,15 @@ final class SplitCheckClaculatorTests: XCTestCase {
     func testSoundPlayerAndCalculatorResetOnLogoView() {
         let input = buildInput(bill: 100, tip: .tenPercent, split: 2)
         let output = sut.transform(input: input)
-        let expectation = XCTestExpectation(description: "Reset calculator called")
+        let resetExpectation = XCTestExpectation(description: "Reset calculator called")
         let audioExpectation = mockAudioPlayer.expectation
         
         output.resetCalculatorPublisher.sink { _ in
-            expectation.fulfill()
+            resetExpectation.fulfill()
         }.store(in: &cancellable)
         
         logoViewSubject.send()
-        wait(for: [expectation, audioExpectation], timeout: 1)
+        wait(for: [resetExpectation, audioExpectation], timeout: 1)
     }
     
     private func buildInput(bill: Double, tip: Tip, split: Int) -> CalculatorViewModel.Input {

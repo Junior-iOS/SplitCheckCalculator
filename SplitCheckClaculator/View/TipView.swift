@@ -84,7 +84,6 @@ final class TipView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        observe()
     }
     
     public func reset() {
@@ -197,5 +196,7 @@ extension TipView: CodeView {
         }
     }
     
-    func setupAdditionalConfiguration() {}
+    func setupAdditionalConfiguration() {
+        observe()
+    }
 }

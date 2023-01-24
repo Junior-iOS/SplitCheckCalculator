@@ -17,6 +17,7 @@
 		14A72FF429778A64007649C2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF329778A64007649C2 /* Result.swift */; };
 		14A72FF62977930B007649C2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF52977930B007649C2 /* String+Extensions.swift */; };
 		14A72FF82977A436007649C2 /* UIResponder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A72FF72977A436007649C2 /* UIResponder+Extensions.swift */; };
+		14B1FEE0298038D200379B64 /* SplitCheckClaculatorSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B1FEDF298038D200379B64 /* SplitCheckClaculatorSnapshotTests.swift */; };
 		14CBA6FF29692E1F00CBDDDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA6FE29692E1F00CBDDDC /* AppDelegate.swift */; };
 		14CBA70129692E1F00CBDDDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA70029692E1F00CBDDDC /* SceneDelegate.swift */; };
 		14CBA70329692E1F00CBDDDC /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA70229692E1F00CBDDDC /* CalculatorViewController.swift */; };
@@ -31,7 +32,7 @@
 		14CBA7392969305600CBDDDC /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 14CBA7382969305600CBDDDC /* SnapshotTesting */; };
 		14CBA73B2969308F00CBDDDC /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 14CBA73A2969308F00CBDDDC /* CombineCocoa */; };
 		14CBA743296938BC00CBDDDC /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA742296938BC00CBDDDC /* LogoView.swift */; };
-		14CBA7452969397D00CBDDDC /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA7442969397D00CBDDDC /* InputView.swift */; };
+		14CBA7452969397D00CBDDDC /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA7442969397D00CBDDDC /* BillInputView.swift */; };
 		14CBA7472969398D00CBDDDC /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA7462969398D00CBDDDC /* TipView.swift */; };
 		14CBA7492969399300CBDDDC /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA7482969399300CBDDDC /* SplitView.swift */; };
 		14CBA74B296939B900CBDDDC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBA74A296939B900CBDDDC /* ResultView.swift */; };
@@ -74,6 +75,7 @@
 		14A72FF52977930B007649C2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		14A72FF72977A436007649C2 /* UIResponder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extensions.swift"; sourceTree = "<group>"; };
 		14A72FF929790F99007649C2 /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
+		14B1FEDF298038D200379B64 /* SplitCheckClaculatorSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitCheckClaculatorSnapshotTests.swift; sourceTree = "<group>"; };
 		14CBA6FB29692E1E00CBDDDC /* SplitCheckClaculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitCheckClaculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CBA6FE29692E1F00CBDDDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14CBA70029692E1F00CBDDDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		14CBA71F29692E2200CBDDDC /* SplitCheckClaculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitCheckClaculatorUITests.swift; sourceTree = "<group>"; };
 		14CBA72129692E2200CBDDDC /* SplitCheckClaculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitCheckClaculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14CBA742296938BC00CBDDDC /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		14CBA7442969397D00CBDDDC /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		14CBA7442969397D00CBDDDC /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
 		14CBA7462969398D00CBDDDC /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		14CBA7482969399300CBDDDC /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		14CBA74A296939B900CBDDDC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
@@ -204,8 +206,9 @@
 		14CBA71429692E2100CBDDDC /* SplitCheckClaculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				14CBA71529692E2100CBDDDC /* SplitCheckClaculatorTests.swift */,
 				14707A332980310700EB278B /* MockAudioPlayerService.swift */,
+				14CBA71529692E2100CBDDDC /* SplitCheckClaculatorTests.swift */,
+				14B1FEDF298038D200379B64 /* SplitCheckClaculatorSnapshotTests.swift */,
 			);
 			path = SplitCheckClaculatorTests;
 			sourceTree = "<group>";
@@ -270,7 +273,7 @@
 				14CBA74A296939B900CBDDDC /* ResultView.swift */,
 				14A72FE329739D03007649C2 /* AmountView.swift */,
 				14A72FE52973A240007649C2 /* DescriptionView.swift */,
-				14CBA7442969397D00CBDDDC /* InputView.swift */,
+				14CBA7442969397D00CBDDDC /* BillInputView.swift */,
 				14CBA7462969398D00CBDDDC /* TipView.swift */,
 				14CBA7482969399300CBDDDC /* SplitView.swift */,
 			);
@@ -471,7 +474,7 @@
 				14CBA755296A5A2E00CBDDDC /* ThemeColor.swift in Sources */,
 				14CBA743296938BC00CBDDDC /* LogoView.swift in Sources */,
 				14CBA7472969398D00CBDDDC /* TipView.swift in Sources */,
-				14CBA7452969397D00CBDDDC /* InputView.swift in Sources */,
+				14CBA7452969397D00CBDDDC /* BillInputView.swift in Sources */,
 				14A72FE429739D03007649C2 /* AmountView.swift in Sources */,
 				14A72FF029774A05007649C2 /* CalculatorViewModel.swift in Sources */,
 				14CBA752296A59EA00CBDDDC /* UIColor+Extensions.swift in Sources */,
@@ -488,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14CBA71629692E2100CBDDDC /* SplitCheckClaculatorTests.swift in Sources */,
+				14B1FEE0298038D200379B64 /* SplitCheckClaculatorSnapshotTests.swift in Sources */,
 				14707A342980310700EB278B /* MockAudioPlayerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

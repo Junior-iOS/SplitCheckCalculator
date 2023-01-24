@@ -57,7 +57,6 @@ final class SplitView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -108,5 +107,7 @@ extension SplitView: CodeView {
         }
     }
     
-    func setupAdditionalConfiguration() {}
+    func setupAdditionalConfiguration() {
+        observe()
+    }
 }

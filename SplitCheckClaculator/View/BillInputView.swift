@@ -10,7 +10,7 @@ import UIKit
 import Combine
 import CombineCocoa
 
-final class InputView: UIView {
+final class BillInputView: UIView {
     
     private let descriptionView: DescriptionView = {
         let view = DescriptionView(top: "Enter", bottom: "your bill")
@@ -64,7 +64,6 @@ final class InputView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
-        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -88,7 +87,7 @@ final class InputView: UIView {
     
 }
 
-extension InputView: CodeView {
+extension BillInputView: CodeView {
     func buildHierarchy() {
         addSubviews(descriptionView, containerView)
         containerView.addSubviews(currencyLabel, amountTextField)
@@ -119,5 +118,7 @@ extension InputView: CodeView {
         }
     }
     
-    func setupAdditionalConfiguration() {}
+    func setupAdditionalConfiguration() {
+        observe()
+    }
 }
