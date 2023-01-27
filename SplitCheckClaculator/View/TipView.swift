@@ -163,6 +163,7 @@ final class TipView: UIView {
                 textField.placeholder = "Make it geneours!"
                 textField.keyboardType = .decimalPad
                 textField.autocorrectionType = .no
+                textField.accessibilityIdentifier = ScreenIdentifier.TipView.customTipAlertTextField.rawValue
             }
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             let ok = UIAlertAction(title: "Ok", style: .default) { [weak self] _ in

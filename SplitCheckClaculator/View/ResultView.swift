@@ -17,7 +17,7 @@ final class ResultView: UIView {
     private lazy var amountPerPersonLabel: UILabel = {
         let label = UILabel()
         let text = NSMutableAttributedString(
-            string: "R$0",
+            string: "R$ 0",
             attributes: [.font: ThemeFont.bold(ofSize: 48)])
         text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSRange(location: 0, length: 2))
         label.attributedText = text

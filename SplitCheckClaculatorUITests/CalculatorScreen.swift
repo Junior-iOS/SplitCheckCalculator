@@ -93,7 +93,7 @@ class CalculatorScreen {
             twentyPercentButton.tap()
         case .custom(let value):
             customTipButton.tap()
-            XCTAssertTrue(customTipAlertTextField.waitForExistence(timeout: 1))
+            XCTAssertTrue(customTipAlertTextField.waitForExistence(timeout: 1.0))
             customTipAlertTextField.typeText("\(value)\n")
         }
     }
