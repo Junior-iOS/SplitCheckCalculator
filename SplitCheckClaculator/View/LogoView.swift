@@ -74,5 +74,7 @@ extension LogoView: CodeView {
         }
     }
     
-    func setupAdditionalConfiguration() {}
+    func setupAdditionalConfiguration() {
+        accessibilityIdentifier = ScreenIdentifier.LogoView.logoView.rawValue
+    }
 }

@@ -8,13 +8,32 @@
 import Foundation
 
 struct ScreenIdentifier {
+    
+    enum LogoView: String {
+        case logoView
+    }
+    
     enum ResultView: String {
         case totalAmountPerPersonValueLabel
         case totalBillValueLabel
         case totalTipValueLabel
-        
-        public func getValue() -> String {
-            return rawValue
-        }
+    }
+    
+    enum BillInputView: String {
+        case textField
+    }
+    
+    enum TipView: String {
+        case tenPercentButton
+        case fifteenPercentButton
+        case twentyPercentButton
+        case customButton
+        case customTipAlertTextField
+    }
+    
+    enum SplitView: String {
+        case decreaseButton
+        case increaseButton
+        case quantityLabel
     }
 }

@@ -19,6 +19,7 @@ final class SplitView: UIView {
     
     private lazy var decrementButton: UIButton = {
         let button = buildButton(text: "-", corner: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+        button.accessibilityIdentifier = ScreenIdentifier.SplitView.decreaseButton.rawValue
         button.tapPublisher.flatMap { [unowned self] _ in
             Just(self.splitSubject.value == 1 ? 1 : self.splitSubject.value - 1)
         }.assign(to: \.value, on: splitSubject)
@@ -28,6 +29,7 @@ final class SplitView: UIView {
     
     private lazy var increaseButton: UIButton = {
         let button = buildButton(text: "+", corner: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        button.accessibilityIdentifier = ScreenIdentifier.SplitView.increaseButton.rawValue
         button.tapPublisher.flatMap { [unowned self] _ in
             Just(self.splitSubject.value + 1)
         }.assign(to: \.value, on: splitSubject)
@@ -36,7 +38,9 @@ final class SplitView: UIView {
     }()
     
     private let quantityLabel: UILabel = {
-        return LabelFactory.build(text: "1", font: ThemeFont.bold(ofSize: 20), backgroundColor: .white)
+        let label = LabelFactory.build(text: "1", font: ThemeFont.bold(ofSize: 20), backgroundColor: .white)
+        label.accessibilityIdentifier = ScreenIdentifier.SplitView.quantityLabel.rawValue
+        return label
     }()
     
     private lazy var stackView: UIStackView = {

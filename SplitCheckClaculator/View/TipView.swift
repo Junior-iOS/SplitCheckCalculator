@@ -20,6 +20,7 @@ final class TipView: UIView {
     
     private lazy var tenPercentTipButton: UIButton = {
         let button = buildTipButton(with: .tenPercent)
+        button.accessibilityIdentifier = ScreenIdentifier.TipView.tenPercentButton.rawValue
         button.tapPublisher.flatMap({
             Just(Tip.tenPercent)
         }).assign(to: \.value, on: tipSubject)
@@ -29,6 +30,7 @@ final class TipView: UIView {
     
     private lazy var fifteenPercentTipButton: UIButton = {
         let button = buildTipButton(with: .fifteenPercent)
+        button.accessibilityIdentifier = ScreenIdentifier.TipView.fifteenPercentButton.rawValue
         button.tapPublisher.flatMap({
             Just(Tip.fifteenPercent)
         }).assign(to: \.value, on: tipSubject)
@@ -38,6 +40,7 @@ final class TipView: UIView {
     
     private lazy var twentyPercentTipButton: UIButton = {
         let button = buildTipButton(with: .twentyPercent)
+        button.accessibilityIdentifier = ScreenIdentifier.TipView.twentyPercentButton.rawValue
         button.tapPublisher.flatMap({
             Just(Tip.twentyPercent)
         }).assign(to: \.value, on: tipSubject)
@@ -47,6 +50,7 @@ final class TipView: UIView {
     
     private lazy var customTipButton: UIButton = {
         let button = UIButton()
+        button.accessibilityIdentifier = ScreenIdentifier.TipView.customButton.rawValue
         button.setTitle("Custom Tip", for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
         button.backgroundColor = ThemeColor.primary
